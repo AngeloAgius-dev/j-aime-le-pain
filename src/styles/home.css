@@ -1,6 +1,11 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    font-family: "NotoSans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: hidden;
 }
 
 .popup-frame {
