@@ -1,10 +1,19 @@
+@font-face {
+    font-family: NotoSans;
+    src: url(../assets/fonts/NotoSans-Regular.ttf);
+}
+
 * {
     font-family: "NotoSans", sans-serif;
     margin: 0;
     padding: 0;
 }
 
-html {
+.popup-frame {
+    display: none;
+}
+
+/*html {
     overflow-y: hidden;
 }
 
@@ -43,4 +52,115 @@ html {
     font-size: 20px;
     text-align: justify;
     margin: 20px 0;
+}*/
+
+nav {
+    background-color: #0a420b;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+nav ul {
+    display: block;
+    margin-right: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+nav ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #145c04;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 5px;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+    color: #000000;
+}
+
+.search-bar ::placeholder {
+    color: #000000;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: #145c04;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+}
+
+.background {
+    height: 100vh;
+    background: url(../assets/img/background/plank-background.png) no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(1rem);
+}
+
+.background img {
+    height: 150px;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: #0a420b;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #145c04;
 }
